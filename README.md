@@ -1,4 +1,6 @@
 CatWare-5.0-AcidSteam
 =====================
 
-The new version of catware project
+This is the new version of the CatWare project.
+This version : 5.0 (already called AcidStream) is coded with django.
+
