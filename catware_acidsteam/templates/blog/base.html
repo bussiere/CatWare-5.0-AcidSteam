@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+{% load static  %}
+
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="/media/css/style.css" />
+		<title>{% block title %}CatWare{% endblock %}</title>
+	</head>
+
+	<body>
+		<header>CatWare</header>
+		<img src="{% static 'paradox.jpg' %}" />			
+		<nav>
+			{% block nav %}
+			{% endblock %}
+		</nav>
+		
+		<div id="content">
+			{% block content %}{% endblock %}
+		</div>
+		
+		<footer>Paradox Prod</footer>
+	</body>
+</html>	
