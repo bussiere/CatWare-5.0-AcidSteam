@@ -69,7 +69,7 @@ STATIC_URL = '/assets/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    "/home/paradox/repo/CatWare-5.0-AcidSteam/catware_acidsteam/assets/"
+    "/home/paradox/repo/CatWare-5.0-AcidSteam/catware_acidsteam/assets",
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
