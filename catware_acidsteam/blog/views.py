@@ -1,12 +1,18 @@
 #-*- coding: utf-8 -*-
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
+from django.shortcuts import render, get_object_or_404
+from blog.models import Article
 from datetime import datetime
-from django.shortcuts import render
 
 def home(request):
-	text = """<center><h1>CatWare-4.0.0.1-AcidSteaM #dev</h1></br>
-		<p>P4R4D0X1 Prod</p></center>"""
-	return HttpResponse(text)
+	"""Affiche les articles du blog"""
+	articles = Article.objects.all() 	
+	return render(request, 'blog/home.html', {'derniers_articles':articles})
+
+def read(request, id, slug):
+	"""Affiche un article complet"""
+	article = get_object_or_404(Article, id=id, slug=slug)
+	return render(request, 'blog/read.html', {'article':article})
 
 def list_articles(request, month, year):
 	text = "Vous avez demandé les articles de {0} {1}".format(month, year)
