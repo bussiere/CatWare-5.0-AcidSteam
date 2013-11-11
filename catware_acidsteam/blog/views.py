@@ -40,9 +40,11 @@ def article(request):
 			form.save()
 
 	else:
-		form = ArticleForm(instance=article)
+		form = ArticleForm()
 	
-	return render(request, 'blog/article.html', locals())							
+	return render(request, 'blog/article.html', locals())	
+
+							
 def list_articles(request, month, year):
 	text = "Vous avez demandé les articles de {0} {1}".format(month, year)
 	return HttpResponse(text)		
